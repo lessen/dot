@@ -1,7 +1,10 @@
 # dot
 
+## What
+
 Portable dotfiles.
 
+## Why
 
 Problem:
 
@@ -25,7 +28,7 @@ Solution:
      - edit `dot`
      - type `reload` or restart via control-d then  `sh dot`.
 
-#d# Udpates
+## Updates
 
 There is an `update` function that will download (and overwrite) the local `dot` function. Will wipe any tweeks you've added to `dot`.
 Use with care.
