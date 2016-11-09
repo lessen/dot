@@ -1,7 +1,16 @@
 # -*- sh -*-
 
+# 1. Make a place to write the config files
+# 2. Write the configs to thse files.
+# 3. Configure emacs with a call to emacs -script
+# 4. Run a shell containing magic commands to run using those configs.
+
+
+
 Dot=/tmp/$USER/dot
 mkdir -p $Dot
+
+
 
 #########################################################
 cat <<'EOF' > $Dot/dotbashrc
@@ -224,5 +233,9 @@ cat<<'EOF' > $Dot/dotemacs
 EOF
 
 #########################################################
+
+# call the emacs package manager to load any missing packages
 emacs -script $Dot/install.el
+
+# call a shell with functions that call things with the above config
 Dot=$Dot  bash --init-file $Dot/dotbashrc  -i
