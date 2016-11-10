@@ -114,7 +114,7 @@ update() {
   echo "Return to continue, Control-c to cancel... "
   read x
   echo "Updating dot ... "
-  svn  export --force https://github.com/s-more/src/trunk/dot
+  svn -q export --force https://github.com/lessen/dot/trunk/dot
   echo ""
   echo "You should run 'reload' now."
 }
